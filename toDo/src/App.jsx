@@ -1,18 +1,15 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import ToDoPage from './toDoPage/ToDoPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Login from './components/Login';
+import ToDoPageApp from './toDoPage/ToDoPageApp';
 import './App.css';
 
 function App() {
-
   return (
     <>
-      <Header />
       <Routes>
-        <Route path="/" element={<Login/>} />
-        <Route path="/todo" element={<ToDoPage />} />
+        <Route path="/" element={<Login  />} />
+        <Route path="/todo/*" element={<ToDoPageApp />} />
       </Routes>
     </>
   );

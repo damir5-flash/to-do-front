@@ -1,0 +1,81 @@
+.userHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logoText {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+}
+
+.userBlock {
+    display: flex;
+    align-items: center;
+}
+
+.userMenu {
+    position: relative;
+}
+
+.userNameBlock {
+    display: flex;
+    align-items: center;
+    background: #8A64D6;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    justify-content: space-between; /* Равномерное распределение внутри блока */
+    z-index: 2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Добавлена тень */
+}
+
+.userIcon {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+    border-radius: 50px;
+}
+
+.userName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.arrow {
+    font-size: 12px;
+    margin-left: auto; /* Отодвигаем стрелку вправо */
+}
+
+.arrow.open {
+    transform: rotate(180deg); /* Разворачиваем стрелку при открытии */
+}
+
+.dropdownMenu {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background: #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 105px;
+    z-index: 1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Добавлена тень */
+}
+
+.dropdownMenu p {
+    cursor: pointer;
+}
+
+.editProfText{
+    margin-top: 30px;
+}
+
+.logoutText{
+    margin-top: 0px;
+}

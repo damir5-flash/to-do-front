@@ -1,21 +1,16 @@
-import { useState } from 'react';
-import reactLogo from '../assets/react.svg';
-import viteLogo from '/vite.svg';
-import './toDoPageApp.css';
+import { Routes, Route } from 'react-router-dom';
+import ToDoPage from './ToDoPage';
+import Pomodor from './Pomodor';
+import UserHeader from '../components/UserHeader';
 
 function ToDoPageApp() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-    <div>
-      <h1>shfjbas</h1>
-    </div>
-    <div>
-      <h1>sdkjnsd</h1>
-    </div>
-    </>
-  );
+  return (<>
+    <UserHeader/>
+    <Routes>
+      <Route path="/" element={<ToDoPage />} />
+      <Route path="/pomodor" element={<Pomodor />} />
+    </Routes>
+  </>);
 }
 
 export default ToDoPageApp;

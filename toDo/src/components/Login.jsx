@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header"; // Добавил импорт
 import "./Login.css";
 
 export default function Login() {
@@ -20,44 +21,47 @@ export default function Login() {
   };
 
   return (
-    <div className="login">
-      <h2 className="active">Sign In</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="input-container">
-          <input 
-            type="text" 
-            className="text" 
-            name="username" 
-            required 
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <label className="floating-label">Username</label>
-        </div>
+    <>
+      <Header /> {/* Обернул в фрагмент, чтобы JSX был корректным */}
+      <div className="login">
+        <h2 className="active">Sign In</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="input-container">
+            <input
+              type="text"
+              className="text"
+              name="username"
+              required
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <label className="floating-label">Username</label>
+          </div>
 
-        <div className="input-container">
-          <input 
-            type={showPassword ? "text" : "password"} 
-            className="text" 
-            name="password" 
-            required 
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <label className="floating-label">Password</label>
-        </div>
+          <div className="input-container">
+            <input
+              type={showPassword ? "text" : "password"}
+              className="text"
+              name="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <label className="floating-label">Password</label>
+          </div>
 
-        <div className="toggle-password">
-          <input 
-            type="checkbox" 
-            id="toggle-password" 
-            onChange={() => setShowPassword(!showPassword)} 
-          />
-          <label htmlFor="toggle-password">Show Password</label>
-        </div>
+          <div className="toggle-password">
+            <input
+              type="checkbox"
+              id="toggle-password"
+              onChange={() => setShowPassword(!showPassword)}
+            />
+            <label htmlFor="toggle-password">Show Password</label>
+          </div>
 
-        <button type="submit" className="sign">Sign In</button>
-      </form>
-    </div>
+          <button type="submit" className="sign">Sign In</button>
+        </form>
+      </div>
+    </>
   );
 }
