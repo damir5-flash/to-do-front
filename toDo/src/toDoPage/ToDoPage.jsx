@@ -1,10 +1,16 @@
-
+import { useState } from "react";
+import './ToDoPage.css'
+import AddTask from '../components/Modal/AddTask';
 
 export default function ToDoPage() {
+  const [modalActive, setModalActive] = useState(false);
+
   return (
-    <div>
-      <h1>Страница списка дел</h1>
-      
-    </div>
+    <>
+      <AddTask active={modalActive} setActive={setModalActive} />
+      <button className="addNewTaskButton" onClick={() => setModalActive(true)}>+</button>
+    </>
   );
 }
+
+
