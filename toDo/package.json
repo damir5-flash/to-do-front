@@ -3,15 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://damir5-flash.github.io/to-do-front/",
   "scripts": {
     "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
+    "react-datetime-picker": "^6.0.1",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0"
   },
