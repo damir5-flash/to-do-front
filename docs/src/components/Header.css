@@ -1,0 +1,11 @@
+nav{
+    margin: 0;
+    display: flex;
+    background-color: #9FA4FF;
+    justify-content: center;
+}
+
+.logoText{
+    font-family: 'Audiowide', sans-serif;
+    font-size: 35px;
+}

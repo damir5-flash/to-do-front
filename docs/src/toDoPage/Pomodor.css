@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.pomodor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c2bee0;
+}
+
+.title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 24px;
+  color: black;
+  text-align: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: 10px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Press Start 2P", cursive;
+}
+
+.start-button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  background-color: #8c6cd3;
+  color: black;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #7a5cc0;
+}
