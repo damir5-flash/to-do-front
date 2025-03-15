@@ -1,0 +1,54 @@
+.menuBlock {
+    background-color: #A0A0FF;
+    padding: 0;
+    width: 200px; /* Оставили уменьшенную ширину */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Сделали компактнее */
+}
+  
+.toDoBlock, .pomodorBlock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 0 25px 25px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* По умолчанию */
+.toDoBlock {
+    background-color: #9070D7; /* Фиолетовый */
+}
+
+.pomodorBlock {
+    background-color: transparent;
+}
+
+
+.pomodorBlock.active {
+    background-color: #9070D7;
+}
+
+/* Деактивация LIST при выборе POMODOR */
+.toDoBlock.inactive {
+    background-color: transparent !important;
+}
+
+.menuIcon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: white; /* Если нужна подложка */
+    padding: 5px;
+}
+  
+.toDoText, .pomodorText {
+    font-size: 16px;
+    font-family: cursive, sans-serif;
+}
